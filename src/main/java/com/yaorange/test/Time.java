@@ -10,6 +10,8 @@ package com.yaorange.test;
 public class Time {
     public static void main(String[] args) {
         long l = System.currentTimeMillis();
+        int[] ints = new int[10];
+        System.out.println("+++++");
         System.out.println(l);
     }
 }
