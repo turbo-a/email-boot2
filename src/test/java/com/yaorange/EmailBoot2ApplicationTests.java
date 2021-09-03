@@ -23,13 +23,13 @@ class EmailBoot2ApplicationTests {
 
     @Test
     public void sendSimpleMail() {
-        for (int i = 1000; i >0 ; i--) {
+
             //构建一个邮件对象
             SimpleMailMessage message = new SimpleMailMessage();
             //设置邮件主题
             message.setSubject("这是一封测试邮件");
             //设置邮件发送者
-            message.setFrom("a15700552905@163.com");
+            message.setFrom("1145208696@qq.com");
             //设置邮件接收者，可以有多个接收者
             message.setTo("c@qq.com");
             //设置邮件抄送人，可以有多个抄送人
@@ -42,14 +42,14 @@ class EmailBoot2ApplicationTests {
             message.setText("这是测试邮件的正文");
             //发送邮件
             javaMailSender.send(message);
-        }
+
     }
     @Test
     public void sendAttachFileMail() throws MessagingException {
         MimeMessage mimeMessage = javaMailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(mimeMessage,true);
         helper.setSubject("这是一封测试邮件");
-        helper.setFrom("a15700552905@163.com");
+        helper.setFrom("crvid-39@gmail.com");
         helper.setTo("1145208696@qq.com");
 //        helper.setCc("37xxxxx37@qq.com");
 //        helper.setBcc("14xxxxx098@qq.com");
@@ -63,15 +63,15 @@ class EmailBoot2ApplicationTests {
         MimeMessage mimeMessage = javaMailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(mimeMessage,true);
         helper.setSubject("这是一封乞讨邮件");
-        helper.setFrom("a15700552905@163.com");
-        helper.setTo("1193098851@qq.com");
+        helper.setFrom("crvid-39@gmail.com");
+        helper.setTo("1145208696@qq.com");
 //        helper.setCc("37xxxxx37@qq.com");
 //        helper.setBcc("14xxxxx098@qq.com");
         helper.setSentDate(new Date());
         helper.setText("这是测试邮件的正文");
         helper.setText("<p>hello 你好，我没钱吃饭啦，请美女赏口饭吃</p>" +
                 "<p>微信：</p>" +
-                "<img src='cid:p1'/>" +
+                "<img src='cid:p1'/ style='width:20px;'>" +
                 "<p>支付宝：</p>" +
                 "<img src='cid:p2'/>" +
                 "<p>下面是一个超链接：</p><a href=\"https://www.google.com\">爱心捐款</a>",true);
@@ -87,7 +87,7 @@ class EmailBoot2ApplicationTests {
         MimeMessage mimeMessage = javaMailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true);
         helper.setSubject("这是一封测试邮件");
-        helper.setFrom("a15700552905@163.com");
+        helper.setFrom("crvid39@gmail.com");
         helper.setTo("1145208696@qq.com");
 //        helper.setCc("37xxxxx37@qq.com");
 //        helper.setBcc("14xxxxx098@qq.com");
